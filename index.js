@@ -26,7 +26,7 @@ for(let i=0;i<tokens.length-1;i++)
 		}
 
 		if(token.type=="float")
-			if(token.data.endsWith("0"))
+			while(token.data.indexOf(".")>0 && token.data.endsWith("0"))
 				token.data=token.data.substring(0, token.data.length-1)
 
 		if(token.type=="whitespace" && token.data==" " )
