@@ -1,13 +1,11 @@
-var tokenString = require('glsl-tokenizer/string')
-var fs = require('fs')
+const tokenString = require('glsl-tokenizer/string')
+const fs = require('fs')
 
 
 
-
-var tokens = tokenString(fs.readFileSync('some.glsl'))
+const tokens = tokenString(fs.readFileSync('some.glsl'))
 
 console.log(tokens);
-
 
 let str="";
 for(let i=0;i<tokens.length-1;i++)
